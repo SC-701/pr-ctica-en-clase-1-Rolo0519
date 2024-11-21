@@ -15,7 +15,7 @@ namespace Abstracciones.Modelos
     {        
         public Guid? Curriculum { get; set; }
         public Guid? Foto { get; set; }
-
+        //////
     }
     public class PerfilRequest:Perfil
     {
