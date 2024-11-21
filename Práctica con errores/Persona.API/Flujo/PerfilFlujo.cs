@@ -13,10 +13,11 @@ namespace Flujo
         private IDocumentoDA _documentoDA;
         private IDocumentoServicio _documentoServicio;
 
-        public PerfilFlujo(IDocumentoServicio documentoServicio, IDocumentoDA documentoDA)
+        public PerfilFlujo(IDocumentoServicio documentoServicio, IDocumentoDA documentoDA, IPerfilDA perfilDA)
         {
             _documentoServicio = documentoServicio;
             _documentoDA = documentoDA;
+            _perfilDA  = perfilDA;
         }
 
         public async Task<Guid> Agregar(PerfilRequest perfil)
@@ -27,7 +28,7 @@ namespace Flujo
             await _documentoDA.Agregar(perfil.Curriculum,idCurriculum);            
             var foto = await _documentoServicio.Agregar(perfil.Foto, idFoto);
             await _documentoDA.Agregar(perfil.Foto, idFoto);
-            var resultado = await _perfilDA.Agregar(new PerfilBD { IdPersona =perfil.IdPersona, Video = perfil.Video, Curriculum = idCurriculum, Foto = idFoto });
+            var resultado = await _perfilDA.Agregar(new PerfilBD { IdPersona =perfil.IdPersona, Video = perfil.Video, Curriculum = idCurriculum, Foto = idFoto  });
             return resultado;
         }
 

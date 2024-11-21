@@ -56,7 +56,7 @@ builder.Services.AddScoped<IDocumentoServicio, DocumentoServicio>();
 builder.Services.AddScoped<ICorreoServicio, CorreoServicio>();
 builder.Services.AddScoped<IFormatoHelper, Formato>();
 builder.Services.AddScoped<IPersonaReglas, PersonaReglas>();
-builder.Services.AddScoped<IPersonaFlujo, IPersonaFlujo>();
+builder.Services.AddScoped<IPersonaFlujo, PersonaFlujo>();
 builder.Services.AddScoped<IPokemonFlujo, PokemonFlujo>();
 builder.Services.AddScoped<IPerfilFlujo, PerfilFlujo>();
 builder.Services.AddScoped<IDocumentoFlujo, DocumentoFlujo>();

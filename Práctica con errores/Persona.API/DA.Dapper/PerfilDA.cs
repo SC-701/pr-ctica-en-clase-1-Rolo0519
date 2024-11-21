@@ -19,7 +19,7 @@ namespace DA.Dapper
 
         public async Task<Guid> Agregar(PerfilBD perfil)
         {
-            string sql = @"AgregaPerfil";
+            string sql = @"AgregarPerfil";
             var resultadoConsulta=await _sqlConnection.ExecuteScalarAsync<Guid>(sql, new {  IdPersona = perfil.IdPersona, Foto = perfil.Foto, Video=perfil.Video, Curriculum=perfil.Curriculum });
             return resultadoConsulta;
         }

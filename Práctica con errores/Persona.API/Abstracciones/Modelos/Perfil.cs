@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Abstracciones.Modelos
 {
-    internal class Perfil
+    public class Perfil
     {
         public Guid IdPersona { get; set; }
         public string? Video { get; set; }
